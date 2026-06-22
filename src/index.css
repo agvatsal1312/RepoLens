@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@theme {
+  --font-headline: "EB Garamond", serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-primary: #6f4627;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #8b5e3c;
+  --color-on-primary-container: #ffe3d1;
+  --color-primary-fixed: #ffdcc5;
+  --color-primary-fixed-dim: #f4bb92;
+  
+  --color-secondary: #805530;
+  --color-secondary-container: #fdc395;
+  --color-on-secondary-container: #794e2a;
+  
+  --color-tertiary: #265763;
+  --color-tertiary-fixed: #baeaf9;
+  --color-on-tertiary-fixed-variant: #1a4d59;
+  
+  --color-background: #fff8f5;
+  --color-surface: #fff8f5;
+  --color-surface-dim: #e6d7ce;
+  --color-surface-bright: #fff8f5;
+  --color-surface-card: #FFFDF8;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #fff1e8;
+  --color-surface-container: #fbebe1;
+  --color-surface-container-high: #f5e5dc;
+  --color-surface-container-highest: #efe0d6;
+  
+  --color-bg-primary: #F7F3EC;
+  --color-bg-secondary: #EFE7DB;
+  --color-bg-sidebar: #F1E9DC;
+  
+  --color-text-primary: #0A0A0A;
+  --color-text-secondary: #2A241F;
+  --color-text-muted: #50463E;
+  
+  --color-border-base: #C8B5A0;
+  --color-outline-variant: #BCA48C;
+  
+  --color-state-hover: #E8DED0;
+  
+  --color-status-success: #7D9674;
+  --color-status-warning: #C68A4A;
+  --color-status-error: #B85A4A;
+}
+
+body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+}
+
+.ink-shadow {
+  box-shadow: 0 4px 20px -2px rgba(44, 36, 30, 0.08);
+}
+.ink-shadow-sm {
+  box-shadow: 0 2px 4px -1px rgba(44, 36, 30, 0.05);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-base);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-outline-variant);
+}
+
+/* Hide native password reveal icons */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
+
+/* Typography Utility Classes */
+.font-headline-xl { font-family: var(--font-headline); font-size: 48px; line-height: 56px; letter-spacing: -0.02em; font-weight: 500; }
+.font-headline-lg { font-family: var(--font-headline); font-size: 32px; line-height: 40px; letter-spacing: -0.01em; font-weight: 500; }
+.font-headline-md { font-family: var(--font-headline); font-size: 24px; line-height: 32px; font-weight: 500; }
+
+.font-body-lg { font-family: var(--font-body); font-size: 18px; line-height: 28px; font-weight: 400; }
+.font-body-md { font-family: var(--font-body); font-size: 16px; line-height: 24px; font-weight: 400; }
+.font-body-sm { font-family: var(--font-body); font-size: 14px; line-height: 20px; font-weight: 400; }
+
+.font-label-md { font-family: var(--font-mono); font-size: 13px; line-height: 16px; letter-spacing: 0.02em; font-weight: 500; }
+.font-label-sm { font-family: var(--font-mono); font-size: 11px; line-height: 14px; letter-spacing: 0.05em; font-weight: 500; }
+
+@layer utilities {
+  .fade-in-up {
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
