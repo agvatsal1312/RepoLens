@@ -703,21 +703,7 @@ All routes except auth registration and login require a `Bearer <token>` header.
 
 ---
 
-## ✦ Contributing
 
-Pull requests are welcome. For significant changes, please open an issue first to discuss the proposal.
-
-```bash
-# Type-check the entire project
-npm run lint
-
-# Verify the production build compiles cleanly
-npm run build
-```
-
-Please keep pull requests focused on a single concern and include a clear description of what was changed and why.
-
----
 
 ## ✦ Author
 
@@ -727,15 +713,10 @@ Please keep pull requests focused on a single concern and include a clear descri
 
 ---
 
-## ✦ License
-
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
-
----
 
 <div align="center">
 
-Built with Gemini · Qdrant · MongoDB · Redis · React · Express
+
 
 *RepoLens — because every codebase deserves to be understood.*
 
